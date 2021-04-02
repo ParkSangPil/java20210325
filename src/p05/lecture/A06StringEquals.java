@@ -12,6 +12,7 @@ public class A06StringEquals {
 		
 		boolean d1 = s.equals(t);
 		
+		System.out.println(t==u);
 		System.out.println(s==t);
 		System.out.println(d1);
 	}
