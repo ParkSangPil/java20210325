@@ -77,10 +77,13 @@ public class BankApplication {
 		int money = scanner.nextInt();
 
 		Account account = findAccount(ano);
+		if(account == null) {
+			System.out.println("야이 씨발련아 없는걸 쳐 넣네");
+		}else {
 		account.setBalance(account.getBalance() + money);
-
 		System.out.println("결과 : 예금이 성공되었습니다.");
-
+		}
+		
 	}
 
 	private static void withdraw() {
