@@ -172,40 +172,71 @@ public class ex01 {
 //		}
 //		return (x * y) / gcd(x, y, z);
 
-		
-		
-		
-		int[][] v = { { 1, 4 }, { 3, 4 }, { 3, 10 } };
-		int[] answer = new int[2];
+//		int[][] v = { { 1, 4 }, { 3, 4 }, { 3, 10 } };
+//		int[] answer = new int[2];
+//
+//		for (int j = 0; j < v.length; j++) {
+//			int count = 0;
+//			for (int i = 0; i < v.length; i++) {
+//				if (v[j][0] == v[i][0]) {
+//					count++;
+//				}
+//			}
+//			if (count != 2) {
+//				answer[0] = (int) v[j][0];
+//			}
+//		}
+//
+//		for (int j = 0; j < v.length; j++) {
+//			int count = 0;
+//			for (int i = 0; i < v.length; i++) {
+//				if (v[j][1] == v[i][1]) {
+//					count++;
+//				}
+//			}
+//			if (count != 2) {
+//				answer[1] = (int) v[j][1];
+//			}
+//		}
+//
+////		        return answer;
+//		System.out.println(Arrays.toString(answer));
 
-		for (int j = 0; j < v.length; j++) {
-			int count = 0;
-			for (int i = 0; i < v.length; i++) {
-				if (v[j][0] == v[i][0]) {
-					count++;
-				}
-			}
-			if (count != 2) {
-				answer[0] = (int) v[j][0];
-			}
+//		String a = "(()()())";
+//		System.out.println(a);
+////		System.out.println(a[3]);
+//		char b = a.charAt(1);
+//		System.out.println(b);
+//		System.out.println(b == '(');
+
+		
+		class Solution {
+		    public String removeOuterParentheses(String S) {
+		        String answer = "()()()";
+		        int count = 0;
+		        
+		        Stack<String> stack = new Stack<>();
+		        
+		        for(int i = 0 ; i < S.length() ; i++){
+		            char a = S.charAt(i);
+		            stack.push(S.substring(i,i+1));
+		            
+		            if(a == '('){
+		                count++;
+		            }
+		            if(a == ')'){
+		                count--;
+		            }
+		            if(count == 0){
+		                stack.pop();
+		                stack.remove(0);
+		                answer += stack;
+		                count = 0;
+		            }
+		        }
+		        return answer;
+		    }
 		}
-
-		for (int j = 0; j < v.length; j++) {
-			int count = 0;
-			for (int i = 0; i < v.length; i++) {
-				if (v[j][1] == v[i][1]) {
-					count++;
-				}
-			}
-			if (count != 2) {
-				answer[1] = (int) v[j][1];
-			}
-		}
-
-//		        return answer;
-		System.out.println(Arrays.toString(answer));
-
-		
 		
 		
 		
