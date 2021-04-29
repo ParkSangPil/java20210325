@@ -210,33 +210,34 @@ public class ex01 {
 //		System.out.println(b == '(');
 
 		
-		class Solution {
-		    public String removeOuterParentheses(String S) {
-		        String answer = "()()()";
-		        int count = 0;
-		        
-		        Stack<String> stack = new Stack<>();
-		        
-		        for(int i = 0 ; i < S.length() ; i++){
-		            char a = S.charAt(i);
-		            stack.push(S.substring(i,i+1));
-		            
-		            if(a == '('){
-		                count++;
-		            }
-		            if(a == ')'){
-		                count--;
-		            }
-		            if(count == 0){
-		                stack.pop();
-		                stack.remove(0);
-		                answer += stack;
-		                count = 0;
-		            }
-		        }
-		        return answer;
-		    }
-		}
+//		class Solution {
+//		    public String removeOuterParentheses(String S) {
+//		        String answer = "()()()";
+//		        int count = 0;
+//		        
+//		        Stack<String> stack = new Stack<>();
+//		        
+//		        for(int i = 0 ; i < S.length() ; i++){
+//		            char a = S.charAt(i);
+//		            stack.push(S.substring(i,i+1));
+//		            
+//		            if(a == '('){
+//		                count++;
+//		            }
+//		            if(a == ')'){
+//		                count--;
+//		            }
+//		            if(count == 0){
+//		                stack.pop();
+//		                stack.remove(0);
+//		                answer += stack;
+//		                count = 0;
+//		            }
+//		        }
+//		        return answer;
+//		    }
+//		}
+		
 		
 		
 		
