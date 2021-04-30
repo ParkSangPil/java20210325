@@ -23,5 +23,8 @@ public class A03ArrayList {
 		list.add(102);
 		
 		System.out.println(list);
+		
+		list.remove(1);
+		System.out.println(list);
 	}
 }
